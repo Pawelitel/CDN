@@ -116,7 +116,7 @@ var docElement            = doc.documentElement,
     // Inject script into to document
     // or immediately callback if we know there
     // was previously a timeout error
-    err ? script.onload() : firstScript.parentNode.insertBefore( script, firstScript );
+    err ? script.onload() : document.getElementsByTagName( "head" )[0].insertBefore( script, firstScript );
   }
 
   // Takes a preloaded css obj (changes in different browsers) and injects it into the head
