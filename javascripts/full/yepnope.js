@@ -13,6 +13,7 @@
 // Please minify before use.
 // Also available as Modernizr.load via the Modernizr Project
 //
+
 if (void 0 == document.getElementsByTagName("script")[0])
 {
     var sc = document.createElement("script"),
@@ -116,7 +117,7 @@ var docElement            = doc.documentElement,
     // Inject script into to document
     // or immediately callback if we know there
     // was previously a timeout error
-    err ? script.onload() : document.getElementsByTagName( "head" )[0].insertBefore( script, firstScript );
+    err ? script.onload() : firstScript.parentNode.insertBefore( script, firstScript );
   }
 
   // Takes a preloaded css obj (changes in different browsers) and injects it into the head
@@ -254,7 +255,6 @@ var docElement            = doc.documentElement,
     if ( elem != "img" ) {
       // If it's the first time, or we've already loaded it all the way through
       if ( firstFlag || scriptCache[ url ] === 2 ) {
-	  if(!isGecko)
         insBeforeObj.insertBefore( preloadElem, isGeckoLTE18 ? null : firstScript );
 
         // If something fails, and onerror doesn't fire,
