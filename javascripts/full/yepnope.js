@@ -1,4 +1,4 @@
-// yepnope.js
+﻿// yepnope.js
 // Version - 1.5.4pre
 //
 // by

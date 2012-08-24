@@ -1,4 +1,4 @@
-/* Default class modification */
+﻿/* Default class modification */
 $.extend( $.fn.dataTableExt.oStdClasses, {
 	"sWrapper": "dataTables_wrapper form-inline"
 } );
