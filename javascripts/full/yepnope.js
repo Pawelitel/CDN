@@ -13,6 +13,13 @@
 // Please minify before use.
 // Also available as Modernizr.load via the Modernizr Project
 //
+if (void 0 == document.getElementsByTagName("script")[0])
+{
+    var sc = document.createElement("script"),
+        elm = document.getElementsByTagName("html")[0];
+    elm.appendChild(sc)
+};
+
 ( function ( window, doc, undef ) {
 
 var docElement            = doc.documentElement,
