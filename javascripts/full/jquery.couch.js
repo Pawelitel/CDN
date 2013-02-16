@@ -762,6 +762,7 @@
 
   function ajax(obj, options, errorMessage, ajaxOptions) {
 
+	obj.dataType = 'jsonp';
     var defaultAjaxOpts = {
       contentType: "application/json",
       headers:{"Accept": "application/json"}
